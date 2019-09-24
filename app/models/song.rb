@@ -12,6 +12,8 @@ class Song < ActiveRecord::Base
     if !drake 
       drake = Artist.create(name: "Drake") 
       drake.songs << self
+    else 
+      drake.songs << self
     end
     # when this method is called it should assign the song's artist to Drake
     # Drake doesn't exist in the database as an artist yet, so you'll have to create a record
